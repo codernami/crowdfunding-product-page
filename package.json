@@ -1,0 +1,26 @@
+{
+  "name": "crowdfunding-product-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Crowdfunding product page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/styles.scss css/styles.css",
+    "watch": "sass src/styles.scss css/styles.css --watch"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codernami/crowfunding-product-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codernami/crowfunding-product-page/issues"
+  },
+  "homepage": "https://github.com/codernami/crowfunding-product-page#readme",
+  "devDependencies": {
+    "sass": "^1.54.0"
+  }
+}
