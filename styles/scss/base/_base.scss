@@ -1,3 +1,6 @@
+@use '../config' as *;
+
 body {
-	background-color: yellow;
+	background-color: pink;
+	font-family: $main-font;
 }

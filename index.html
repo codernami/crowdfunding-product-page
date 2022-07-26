@@ -4,32 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- styles -->
   <link rel="stylesheet" type="text/css" href="./styles/css/styles.css">
+
   <title>Frontend Mentor | Crowdfunding product page</title>
 
 </head>
 <body>
 
-  <header>
-    <!-- logo-->
-    <div>
-      <!-- top bar -->
+  <header class="header">
+    <div class="top_bar">
+      <img 
+        src="./styles/assets/images/logo.svg" 
+        alt="logo">
+      <div class="icon-menu">
+        <i class="fa-solid fa-bars icon" id="icon-open"></i>
+          <i class="fa-solid fa-xmark icon hide"id="icon-close"></i>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li>
-          <a>
+    <nav >
+      <ul class="nav_menu hide-menu" id="menu">
+        <li class="nav_item">
+          <a class="nav_link" href="#">
             About
           </a>
         </li>
-        <li>
-          <a>
+        <li class="nav_item">
+          <a class="nav_link" href="#">
             Discover
           </a>
         </li>
-        <li>
-          <a>
+        <li class="nav_item">
+          <a class="nav_link" href="#">
             Get Started
           </a>
         </li>
@@ -193,5 +203,6 @@
   Got it!
 
   <!-- Success modal end -->
+  <script src="./scripts/main.js"></script>
 </body>
 </html>
