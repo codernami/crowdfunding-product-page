@@ -319,6 +319,15 @@ body {
   background-size: cover;
   background-color: black;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: url("../assets/images/image-hero-desktop.jpg");
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 5rem;
+  }
+}
 
 .add-opacity {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image-hero-mobile.jpg");
@@ -331,6 +340,11 @@ body {
   position: relative;
   padding: 1rem;
   z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .top_bar {
+    width: 20%;
+  }
 }
 
 .icon {
@@ -346,6 +360,19 @@ body {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 70%;
+    height: 70px;
+  }
+}
+
 .nav_menu {
   position: absolute;
   transform: translateY(-135%);
@@ -358,14 +385,33 @@ body {
   list-style-type: none;
   z-index: 50;
 }
+@media screen and (min-width: 768px) {
+  .nav_menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    width: 90%;
+    transform: translateY(0);
+    background-color: transparent;
+  }
+}
 
 .nav_item {
   border-bottom: 1px solid hsl(0deg, 0%, 48%);
   padding: 1.5rem 0;
 }
-
 .nav_item:last-child {
   border-bottom: none;
+}
+@media screen and (min-width: 768px) {
+  .nav_item {
+    padding: 0;
+    border-bottom: none;
+  }
+  .nav_item:hover {
+    cursor: pointer;
+  }
 }
 
 .nav_link {
@@ -374,6 +420,11 @@ body {
   font-weight: bold;
   color: black;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .nav_link {
+    color: white;
+  }
 }
 
 .hide-menu {

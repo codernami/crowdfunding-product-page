@@ -15,6 +15,7 @@ openIcon.addEventListener('click', () => {
 // user clicks hamburguer menu button > close menu nav
 closeIcon.addEventListener('click', () => {
 	navMenu.classList.remove('show-menu')
+	navMenu.classList.add('hide-menu')
 	closeIcon.classList.toggle('show')
 	openIcon.classList.toggle('hide')
 	glassContainer.classList.remove('add-opacity')
@@ -25,6 +26,7 @@ closeIcon.addEventListener('click', () => {
 for(let i = 0; i < links.length; i++) {
 	links[i].addEventListener('click', () => {
 		navMenu.classList.remove('show-menu')
+		navMenu.classList.add('hide-menu')
 		closeIcon.classList.toggle('show')	
 		openIcon.classList.toggle('hide')
 		glassContainer.classList.remove('add-opacity')

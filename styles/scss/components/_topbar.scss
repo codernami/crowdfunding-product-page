@@ -5,6 +5,10 @@
 	position: relative;
 	padding: 1rem;
 	z-index: 100;
+
+	@media screen and (min-width: 768px) {
+		width: 20%;
+	}	
 }
 .icon {
 	color: white;
@@ -15,4 +19,9 @@
 }
 .show {
   display: block;
+}
+.icon-menu {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}	
 }

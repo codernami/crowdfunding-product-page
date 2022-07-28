@@ -1,5 +1,11 @@
 @use '../config' as *;
 
+.nav {
+  @media screen and (min-width: 768px) {
+    width: 70%;
+    height: 70px;
+  }  
+}
 .nav_menu {
   position: absolute;
   transform: translateY(-135%);
@@ -11,20 +17,46 @@
   border-radius: 10px;
   list-style-type: none;
   z-index: 50;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;   
+    align-items: start;
+    width: 90%;
+    transform: translateY(0);
+    background-color: transparent;
+  }
 }
 .nav_item {
   border-bottom: 1px solid $dark-gray;
   padding: 1.5rem 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    border-bottom: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }  
 }
-.nav_item:last-child {
-  border-bottom: none;
-}
+
+
 .nav_link {
   padding-left: 1.5rem;
   font-size: 1.3rem;
   font-weight: bold;
   color: black;
   text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    color: white;
+  }  
 }
 .hide-menu {
   transform: translateY(-135%);
