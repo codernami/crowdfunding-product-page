@@ -1,0 +1,9 @@
+@use '../config' as *;
+
+.btn {
+	border: none;
+	background-color: $moderate-cyan;
+	border-radius: 20px;
+	padding: 1rem 2rem;
+	color: white;
+}

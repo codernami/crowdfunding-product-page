@@ -1,0 +1,33 @@
+@use '../config' as *;
+
+.product-card {
+	width: 325px;
+	padding: 0 1rem 2rem 1rem;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	border-radius: 16px;
+	transform: translateY(-35px);	
+}
+.product-card__logo {
+	transform: translateY(-30px);
+}
+.product-card__title {
+	font-size: 1.7rem;
+	margin: 0;
+}
+.product-card__description {
+	font-size: .9rem;
+	color: $dark-gray;
+	line-height: 1.5;
+}
+.product-card__buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.btn-bookmark {
+	background-color: transparent;
+	border: none;
+}

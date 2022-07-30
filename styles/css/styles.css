@@ -333,6 +333,14 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image-hero-mobile.jpg");
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .top_bar {
   display: flex;
   justify-content: space-between;
@@ -435,6 +443,50 @@ body {
 .show-menu {
   transform: translateY(0);
   transition: 0.8s ease;
+}
+
+.btn {
+  border: none;
+  background-color: hsl(176deg, 50%, 47%);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.product-card {
+  width: 325px;
+  padding: 0 1rem 2rem 1rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  transform: translateY(-35px);
+}
+
+.product-card__logo {
+  transform: translateY(-30px);
+}
+
+.product-card__title {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.product-card__description {
+  font-size: 0.9rem;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.5;
+}
+
+.product-card__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-bookmark {
+  background-color: transparent;
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
