@@ -15,18 +15,16 @@
 </head>
 <body>
 
-  <header class="header" id="glass-container">
-    <div class="top_bar">
+  <header class="header" id="header">
+    <nav class="navbar">  
       <img 
         src="./styles/assets/images/logo.svg" 
         alt="logo">  
       <img  id= "icon-menu" 
       class="icon-menu" 
       src="./styles/assets/images/icon-hamburguer.svg" 
-      alt="open menu icon">
-    </div>
-
-    <nav class="nav">
+      alt="icon hamburguer">
+  
       <ul class="nav_menu" id="menu">
         <li class="nav_item">
           <a class="nav_link" href="#">
@@ -44,7 +42,7 @@
           </a>
         </li>
       </ul>
-    </nav>
+    </nav>  
   </header>
   
   <main>
@@ -58,21 +56,21 @@
       </h1>
       <p class="product-card__description">
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.      
-      </p>
+      </p> 
+
       <div class="product-card__buttons">
         <button class="btn">
           Back this project
         </button>
 
-        <button id="btn-bookmark"
-          class="btn-bookmark" >
-          <svg id= "svg-bookmark"
-            height="57">
-            <use href="#icon-bookmark"></use>
-          </svg>  
-     
-          <span id="span-bookmark"
-            class="span-bookmark" >
+        <button id="btn-bookmark" class="btn-bookmark" >
+          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle class="circle" fill="#2F2F2F" cx="28" cy="28" r="28"/>
+              <path class= "inner-circle" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
+            </g>
+          </svg>
+          <span id="span-bookmark" class="span-bookmark" >
             Bookmark
           </span>
         </button>  
@@ -166,7 +164,7 @@
   </main>
 
 
-<div>
+<div class="hide">
   <!-- Selection modal start -->
 
   Back this project
@@ -225,16 +223,6 @@
 
 </div>
 
-<div>
-  <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-    <symbol id= "icon-bookmark">
-      <g fill="none" fill-rule="evenodd">
-        <circle class="circle" fill="#2F2F2F" cx="28" cy="28" r="28"/>
-        <path class= "inner-circle" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
-      </g>
-    </symbol>
-  </svg>
-</div>  
 
   <script src="./scripts/main.js"></script>
 </body>
