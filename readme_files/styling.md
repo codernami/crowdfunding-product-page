@@ -20,6 +20,11 @@
 
 ### Product card
 
+- boton bookmark. en mobile solo muestro el icono. en desktop, muestro el icono con texto, tiene hover y evento de seleccionado.
+
+- utilizo un estado de variable para aplicar estilos sobre el svg y el span. la inicializo en false.
+Al hacer click el estado de la variable pasa a true y aplico estilos. uso un if true, else. 
+
 
 ### Stats
 
