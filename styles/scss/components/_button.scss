@@ -1,0 +1,14 @@
+@use '../config' as *;
+
+.btn {
+	border: none;
+	background-color: $moderate-cyan;
+	border-radius: 30px;
+	padding: 1.1rem 2rem;
+	color: white;
+
+	&:hover {
+		background-color: $dark-cyan;
+		cursor: pointer;
+	}
+}

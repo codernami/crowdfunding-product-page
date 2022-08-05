@@ -6,7 +6,6 @@
 
   <!-- icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="./styles/css/styles.css">
@@ -16,17 +15,16 @@
 </head>
 <body>
 
-  <header class="header" id="glass-container">
-    <div class="top_bar">
+  <header class="header" id="header">
+    <nav class="navbar">  
       <img 
         src="./styles/assets/images/logo.svg" 
-        alt="logo">
-      <div class="icon-menu">
-        <i class="fa-solid fa-bars icon" id="icon-open"></i>
-          <i class="fa-solid fa-xmark icon hide"id="icon-close"></i>
-      </div>
-    </div>
-    <nav class="nav">
+        alt="logo">  
+      <img  id= "icon-menu" 
+      class="icon-menu" 
+      src="./styles/assets/images/icon-hamburguer.svg" 
+      alt="icon hamburguer">
+  
       <ul class="nav_menu" id="menu">
         <li class="nav_item">
           <a class="nav_link" href="#">
@@ -44,20 +42,39 @@
           </a>
         </li>
       </ul>
-    </nav>
-
+    </nav>  
   </header>
   
   <main>
-    <article>
-      <h1>
+    <article class="product-card">
+      <img 
+        class="product-card__logo" 
+        src="./styles/assets/images/logo-mastercraft.svg" 
+        alt="Logo Mastercraft">
+      <h1 class="product-card__title">
         Mastercraft Bamboo Monitor Riser
       </h1>
-      <p>
+      <p class="product-card__description">
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.      
-      </p>
-      <button>Back this project</button>
-      <button>Bookmark</button>
+      </p> 
+
+      <div class="product-card__buttons">
+        <button class="btn">
+          Back this project
+        </button>
+
+        <button id="btn-bookmark" class="btn-bookmark" >
+          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle class="circle" fill="#2F2F2F" cx="28" cy="28" r="28"/>
+              <path class= "inner-circle" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
+            </g>
+          </svg>
+          <span id="span-bookmark" class="span-bookmark" >
+            Bookmark
+          </span>
+        </button>  
+      </div>  
     </article>
 
     <article>
@@ -147,7 +164,7 @@
   </main>
 
 
-
+<div class="hide">
   <!-- Selection modal start -->
 
   Back this project
@@ -203,6 +220,10 @@
   Got it!
 
   <!-- Success modal end -->
+
+</div>
+
+
   <script src="./scripts/main.js"></script>
 </body>
 </html>

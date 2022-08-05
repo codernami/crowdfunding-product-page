@@ -128,6 +128,8 @@ sup {
  */
 img {
   border-style: none;
+  display: block;
+  max-width: 100%;
 }
 
 /* Forms
@@ -313,6 +315,7 @@ body {
 }
 
 .header {
+  position: relative; /*for navbar*/
   height: 305px;
   background-image: url("../assets/images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
@@ -322,10 +325,7 @@ body {
 @media screen and (min-width: 768px) {
   .header {
     background-image: url("../assets/images/image-hero-desktop.jpg");
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
   }
 }
 
@@ -333,31 +333,35 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image-hero-mobile.jpg");
 }
 
-.top_bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 1rem;
-  z-index: 100;
-}
-@media screen and (min-width: 768px) {
-  .top_bar {
-    width: 20%;
-  }
-}
-
-.icon {
-  color: white;
-  font-size: 1.5rem;
-}
-
 .hide {
   display: none;
 }
 
-.show {
-  display: block;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    width: 50%;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 70px;
 }
 
 @media screen and (min-width: 768px) {
@@ -366,35 +370,37 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .nav {
-    width: 70%;
-    height: 70px;
-  }
-}
-
 .nav_menu {
   position: absolute;
-  transform: translateY(-135%);
-  left: 5%;
   width: 90%;
   height: 225px;
+  list-style-type: none;
   padding-left: 0;
   background-color: white;
   border-radius: 10px;
-  list-style-type: none;
+  transform: translate(0, -100%);
+  transition: transform 0.5s ease;
   z-index: 50;
 }
 @media screen and (min-width: 768px) {
   .nav_menu {
     position: relative;
+    height: auto;
     display: flex;
     justify-content: flex-end;
-    align-items: start;
-    width: 90%;
-    transform: translateY(0);
+    transform: translate(0, 0);
     background-color: transparent;
   }
+}
+
+.hide-menu {
+  transform: translate(0, -100%);
+  transition: transform 0.5s ease;
+}
+
+.show-menu {
+  transform: translate(0, 65%);
+  transition: transform 0.5s ease;
 }
 
 .nav_item {
@@ -406,7 +412,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .nav_item {
-    padding: 0;
     border-bottom: none;
   }
   .nav_item:hover {
@@ -427,14 +432,92 @@ body {
   }
 }
 
-.hide-menu {
-  transform: translateY(-135%);
-  transition: 0.8s ease;
+.btn {
+  border: none;
+  background-color: hsl(176deg, 50%, 47%);
+  border-radius: 30px;
+  padding: 1.1rem 2rem;
+  color: white;
+}
+.btn:hover {
+  background-color: hsl(176deg, 72%, 28%);
+  cursor: pointer;
 }
 
-.show-menu {
-  transform: translateY(0);
-  transition: 0.8s ease;
+.product-card {
+  margin: 1rem;
+  padding: 0 1rem 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  transform: translateY(-60px);
+}
+@media screen and (min-width: 768px) {
+  .product-card {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+.product-card__logo {
+  transform: translateY(-30px);
+  margin: 0 auto;
+}
+.product-card__title {
+  font-size: 1.7rem;
+  margin: 0;
+}
+.product-card__description {
+  font-size: 0.9rem;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.5;
+}
+.product-card__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .product-card__buttons {
+    justify-content: space-between;
+  }
+}
+
+.btn-bookmark {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+}
+@media screen and (min-width: 768px) {
+  .btn-bookmark {
+    display: flex;
+    position: relative;
+    width: 170px;
+    padding: 0 0.5rem 0 0;
+    background-color: #DEE2E2;
+    border-radius: 30px;
+    padding-left: 0;
+  }
+  .btn-bookmark:hover {
+    cursor: pointer;
+  }
+  .btn-bookmark:hover .circle {
+    fill: #737070;
+  }
+  .btn-bookmark:hover .span-bookmark {
+    color: #A3A0A0;
+  }
+}
+
+.span-bookmark {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .span-bookmark {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 28px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
