@@ -2,42 +2,47 @@
 
 .product-card {
 	margin: 1rem;
-	padding: 0 1rem 2rem 1rem;
+	padding: 0 1rem 2rem;
 	text-align: center;
 	background-color: white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 	border-radius: 16px;
-	transform: translateY(-35px);	
+	transform: translateY(-60px);	
 
 	@media screen and (min-width: 768px) {
 		padding: 0 2rem 2rem 2rem;
 	}	
-}
-.product-card__logo {
-	transform: translateY(-30px);
-}
-.product-card__title {
-	font-size: 1.7rem;
-	margin: 0;
-}
-.product-card__description {
-	font-size: .9rem;
-	color: $dark-gray;
-	line-height: 1.5;
-}
-.product-card__buttons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
-	@media screen and (min-width: 768px) {
-		justify-content: space-between;
+	&__logo {
+		transform: translateY(-30px);
+		margin: 0 auto;
+	}
+	&__title {
+		font-size: 1.7rem;
+		margin: 0;
+	}
+	&__description {
+		font-size: .9rem;
+		color: $dark-gray;
+		line-height: 1.5;
+	}
 
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (min-width: 768px) {
+			justify-content: space-between;
+
+		}
 	}
 }
+
 .btn-bookmark {
 	background-color: transparent;
 	border: none;
+	width: 50px;
 
 	@media screen and (min-width: 768px) {
 		display: flex;
@@ -50,7 +55,14 @@
 
 		&:hover {
 			cursor: pointer;
-		}
+		
+			.circle{
+				fill: #737070;
+			}
+			.span-bookmark {
+				color: #A3A0A0;
+			}
+		}	
 	}
 }
 .span-bookmark {
