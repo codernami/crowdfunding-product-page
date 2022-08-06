@@ -525,18 +525,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 315px;
   text-align: center;
   background-color: white;
   padding: 1.5rem 1rem;
-}
-@media screen and (min-width: 800px) {
-  .stats {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 750px;
-  }
 }
 .stats h2 {
   font-weight: bolder;
@@ -550,40 +542,47 @@ main {
   margin-bottom: 1rem;
   position: relative;
   width: 250px;
+  /*
+  		&:after{
+  			content: '';
+  			position: absolute;
+  			height: 5px;
+  			width: 30%;
+  			bottom: -115%;
+  			left: 35%;
+  			border-bottom: none;
+
+  		}
+  		*/
+  /*
+  		&:not(.noline)	{
+  			border-bottom: 1px solid green;
+
+  			@media screen and (min-width: 768px) {
+  				border-bottom: none;
+  				border-right: 1px solid green;
+  			}	
+  		}	
+  		*/
 }
-.stats span:not(.noline):after {
+jlkjl .stats span:not(.noline):after {
   content: "";
   position: absolute;
   height: 5px;
   width: 30%;
   bottom: -115%;
   left: 35%;
-  border-bottom: 1px solid hsl(176deg, 72%, 28%);
-}
-@media screen and (min-width: 800px) {
-  .stats span:not(.noline):after {
-    border-bottom: none;
-    border-right: 1px solid hsl(176deg, 72%, 28%);
-    height: 70px;
-    padding-left: 6rem;
-    bottom: 0;
-  }
+  border-bottom: 1px solid red;
 }
 
-.stats-bar {
+#progressBar {
   width: 100%;
   height: 1.1rem;
   border-radius: 20px;
   background-color: #D1CFCF;
 }
-@media screen and (min-width: 768px) {
-  .stats-bar {
-    margin: 2rem auto;
-    width: 600px;
-  }
-}
 
-.stats-full-bar {
+#progressBarFull {
   height: 1.1rem;
   background-color: hsl(176deg, 50%, 47%);
   border-radius: 20px;
