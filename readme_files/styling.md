@@ -28,6 +28,8 @@ Al hacer click el estado de la variable pasa a true y aplico estilos. uso un if 
 
 ### Stats
 
+- incluye una barra de estado
+
 
 ### About this project
 
