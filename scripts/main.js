@@ -116,3 +116,18 @@ function progressFullBar(number){
 }
 progressFullBar(getNumber());
 
+/* 
+******************************
+ABOUT CARDS
+***************************** */
+const aboutCard = document.getElementsByClassName('about-card');
+const aboutInfo = document.getElementsByClassName('about-card__info');
+const aboutBtn = document.getElementsByClassName('about-card__btn');
+
+for(let i= 0; i < aboutCard.length; i++) {	
+	if (aboutInfo[i].textContent == 0) {
+		aboutCard[i].classList.add('disabled-card');
+		aboutBtn[i].classList.add('disabled-btn');
+		aboutBtn.disabled = true;
+	}	
+}
