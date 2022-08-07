@@ -1,0 +1,71 @@
+@use '../config' as *;
+
+.about {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: white;
+
+	h2 {
+		font-weight: bold;
+	}
+	p {
+		color: $light-gray;
+	}
+}
+
+.about-card {
+	margin: 1rem;
+	padding: 1rem;
+	border: 1px solid $light-gray;
+
+	h3 {
+		font-weight: bold;
+	}
+
+}
+.about-card__promo {
+	font-weight: bold;
+	color: $moderate-cyan;
+}
+.about-card__info {
+	display: block;
+	font-size: 2rem;
+	font-weight: bold;
+    color: black;
+    margin: 1rem 0;
+    position: relative;
+	
+	&:after {
+		content: 'left';
+		position: absolute;
+		top: 10px;
+		
+		font-size: 1rem;
+		font-weight: normal;
+		color: $light-gray;
+		padding-left: .5rem;
+	}
+}
+
+.disabled-card {
+	background-color: #F0E4E4;
+	opacity: 0.5;
+}
+
+
+.about-card__btn {
+	border: none;
+	background-color: $moderate-cyan;
+	border-radius: 30px;
+	padding: 1rem 2rem;
+	color: white;
+
+	&:hover {
+		background-color: $dark-cyan;
+		cursor: pointer;
+	}
+}
+.disabled-btn {
+	background-color: $light-gray;
+	pointer-events: none;
+}
