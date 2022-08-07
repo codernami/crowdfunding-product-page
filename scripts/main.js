@@ -96,3 +96,23 @@ function mediaSelected(mediaQuery) {
 }
 mediaSelected(mediaQuery)
 mediaQuery.addListener(mediaSelected)
+
+/* 
+******************************
+STATS BAR
+***************************** */
+const mainStats = document.getElementById('main-stats');
+const statsBar = document.getElementById('statsFullBar');
+
+function getNumber() {
+	const stats = mainStats.textContent;
+	const str = stats.replace("$","");
+	const number = parseInt(str);
+	return number;
+}
+
+function progressFullBar(number){
+	statsBar.style.width = `${number}%`;
+}
+progressFullBar(getNumber());
+
