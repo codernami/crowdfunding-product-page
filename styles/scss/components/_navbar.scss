@@ -1,4 +1,6 @@
-@use '../config' as *;
+@use '../abstracts' as *;
+@use '../base' as *;
+
 
 .navbar {
   display: flex;
@@ -9,12 +11,12 @@
 }
 
 .icon-menu {
-  @media screen and (min-width: 768px) {
+  @include medium {
     display: none;
   } 
 }
 
-.nav_menu {
+.menu {
   position: absolute;
   width: 90%; 
   height: 225px;
@@ -26,13 +28,42 @@
   transition: transform 0.5s ease;
   z-index: 50;
 
-  @media screen and (min-width: 768px) {
+  @include medium {
     position: relative;
     height: auto;
     display: flex;
     justify-content: flex-end;
     transform: translate(0, 0);
     background-color: transparent;
+  }
+
+  &_item {
+    border-bottom: 1px solid $dark-gray;
+    padding: 1.5rem 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @include medium {
+      border-bottom: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }  
+  }
+
+  &_link {
+    padding-left: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+
+    @include medium {
+      color: white;
+    }  
   }
 }
 
@@ -43,34 +74,4 @@
 .show-menu {
   transform: translate(0, 65%);
   transition: transform 0.5s ease;
-}
-
-
-.nav_item {
-  border-bottom: 1px solid $dark-gray;
-  padding: 1.5rem 0;
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    border-bottom: none;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }  
-}
-
-.nav_link {
-  padding-left: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-
-  @media screen and (min-width: 768px) {
-    color: white;
-  }  
 }

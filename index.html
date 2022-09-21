@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./styles/assets/images/favicon-32x32.png">
 
   <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="./styles/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles/css/main.css">
 
   <title>Frontend Mentor | Crowdfunding product page</title>
 
@@ -25,19 +25,19 @@
       src="./styles/assets/images/icon-hamburguer.svg" 
       alt="icon hamburguer">
   
-      <ul class="nav_menu" id="menu">
-        <li class="nav_item">
-          <a class="nav_link" href="#">
+      <ul class="menu" id="menu">
+        <li class="menu_item">
+          <a class="menu_link" href="#">
             About
           </a>
         </li>
-        <li class="nav_item">
-          <a class="nav_link" href="#">
+        <li class="menu_item">
+          <a class="menu_link" href="#">
             Discover
           </a>
         </li>
-        <li class="nav_item">
-          <a class="nav_link" href="#">
+        <li class="menu_item">
+          <a class="menu_link" href="#">
             Get Started
           </a>
         </li>
@@ -59,7 +59,7 @@
       </p> 
 
       <div class="product-card__buttons">
-        <button class="btn">
+        <button class="btn-back">
           Back this project
         </button>
 
@@ -70,7 +70,7 @@
               <path class= "inner-circle" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
             </g>
           </svg>
-          <span id="span-bookmark" class="span-bookmark" >
+          <span id="span-bookmark">
             Bookmark
           </span>
         </button>  
@@ -84,7 +84,7 @@
         </h2>
         <span>of $100,000 backed</span>
       </div>
-      <div class="stats_content">
+      <div>
         <h2>5,007</h2> 
         <span>total backers</span>
       </div>
@@ -92,13 +92,13 @@
         <h2>56</h2>
         <span class="noline">days left</span>
       </div>
-      <div id="statsBar" class="stats-bar">
-        <div id="statsFullBar" class="stats-full-bar ">
+      <div id="statsBar" class="stats__bar">
+        <div id="statsFullBar" class="stats__bar--full ">
         </div>
       </div>    
     </article>
 
-    <article class="about">
+    <section class="about">
       <h2>
         About this project
       </h2>  
@@ -111,60 +111,60 @@
         Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.
       </p>  
 
-      <article class="about-card">
+      <article class="card-reward">
         <h3>
           Bamboo Stand
         </h3>  
-        <span class="about-card__promo">
+        <span class="card-reward__promo">
           Pledge $25 or more
         </span>  
         <p>
           You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
         </p>  
-        <span class="about-card__info">
+        <span class="card-reward__left">
           101
         </span>
-        <button class="about-card__btn">
+        <button class="btn-reward">
           Select Reward
         </button>  
       </article>
 
-      <article class="about-card">
+      <article class="card-reward">
         <h3>
           Black Edition Stand
         </h3>
-        <span class="about-card__promo">
+        <span class="card-reward__promo">
           Pledge $75 or more
         </span>  
         <p>
           You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
         </p>  
-        <span class="about-card__info">
+        <span class="card-reward__left">
           64
         </span>
-        <button class="about-card__btn">
+        <button class="btn-reward">
           Select Reward
         </button> 
       </article>
 
-      <article class="about-card">
+      <article class="card-reward">
         <h3>   
           Mahogany Special Edition
         </h3>  
-        <span class="about-card__promo">
+        <span class="card-reward__promo">
           Pledge $200 or more
         </span>  
         <p>
           You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
         </p>
-        <span class="about-card__info">
+        <span class="card-reward__left">
           0
         </span>
-        <button class="about-card__btn">
+        <button class="btn-reward">
           Out of Stock
         </button>
       </article>
-    </article>
+    </section>
 
   </main>
 

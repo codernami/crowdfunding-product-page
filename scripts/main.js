@@ -5,7 +5,7 @@ DISPLAY MENU NAV MOBILE
 
 const iconMenu = document.getElementById('icon-menu');
 const navMenu = document.getElementById('menu');
-const links = document.getElementsByClassName('nav_item');
+const links = document.getElementsByClassName('menu_item');
 const header = document.getElementById('header');
 
 
@@ -120,14 +120,14 @@ progressFullBar(getNumber());
 ******************************
 ABOUT CARDS
 ***************************** */
-const aboutCard = document.getElementsByClassName('about-card');
-const aboutInfo = document.getElementsByClassName('about-card__info');
-const aboutBtn = document.getElementsByClassName('about-card__btn');
+const rewardCard = document.getElementsByClassName('card-reward');
+const rewardLeft = document.getElementsByClassName('card-reward__left');
+const rewardBtn = document.getElementsByClassName('btn-reward');
 
-for(let i= 0; i < aboutCard.length; i++) {	
-	if (aboutInfo[i].textContent == 0) {
-		aboutCard[i].classList.add('disabled-card');
-		aboutBtn[i].classList.add('disabled-btn');
-		aboutBtn.disabled = true;
+for(let i= 0; i < rewardCard.length; i++) {	
+	if (rewardLeft[i].textContent == 0) {
+		rewardCard[i].classList.add('disabled-card');
+		rewardBtn[i].classList.add('disabled-btn');
+		rewardBtn.disabled = true;
 	}	
 }

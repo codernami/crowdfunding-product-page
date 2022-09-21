@@ -1,6 +1,8 @@
-@use '../config' as *;
+@use '../abstracts' as *;
+@use '../base' as *;
+
 
 body {
-	background-color: pink;
 	font-family: $main-font;
+	background-color: $bg-body;
 }
