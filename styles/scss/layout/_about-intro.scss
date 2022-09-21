@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+
+.about {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: white;
+
+	h2 {
+		font-weight: bold;
+	}
+	p {
+		color: $light-gray;
+	}
+}
