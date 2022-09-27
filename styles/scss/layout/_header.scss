@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .header {
 	position: relative; /*for navbar*/
 	height: 305px;
@@ -6,9 +8,9 @@
 	background-size: cover;
 	background-color: black;
 
-	@media screen and (min-width: 768px) {
+	@include medium {
 		background-image: (url('../assets/images/image-hero-desktop.jpg'));
-		padding: 2rem 5rem;
+		padding: 2vw 5vw;
 	}
 }
 .add-opacity {

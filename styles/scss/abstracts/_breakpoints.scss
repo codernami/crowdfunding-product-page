@@ -1,6 +1,6 @@
-// Material Design Breakpoints 
+// Breakpoints 
 @mixin medium {
-	@media only screen and (min-width: 768px) {
+	@media only screen and (min-width: 600px) {
 		@content;
 	}
 }

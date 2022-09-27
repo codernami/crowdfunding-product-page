@@ -53,7 +53,7 @@ const svgCircle = document.getElementsByClassName('circle')[0];
 const svgInnerCircle = document.getElementsByClassName('inner-circle')[0];
 const spanBookmark = document.getElementById('span-bookmark');
 
-let mediaQuery = window.matchMedia("(min-width: 768px)");
+let mediaQuery = window.matchMedia("(min-width: 600px)");
 
 
 function mediaSelected(mediaQuery) {
@@ -65,7 +65,6 @@ function mediaSelected(mediaQuery) {
 		// > 768px
 		if (mediaQuery.matches) { // > 768
 			if (bookmarked) {
-				btnBookmark.style.width= '185px';
 				svgCircle.style.fill = 'hsl(176, 72%, 28%)';
 				svgInnerCircle.style.fill = 'white';
 				spanBookmark.textContent = "Bookmarked";
@@ -74,7 +73,6 @@ function mediaSelected(mediaQuery) {
 			
 
 			} else {
-				btnBookmark.style.width= '170px';
 				svgCircle.style.fill = '#2F2F2F';
 				svgInnerCircle.style.fill = '#B1B1B1';
 				spanBookmark.textContent = "Bookmark"

@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
 
 $main-font: 'Commissioner', sans-serif;
+
+$title: clamp(1.5rem, 3.5vw, 2rem);
+$title-section: clamp(1.2rem, 2vw, 1.5rem);
+$title-card: clamp(1.2rem, 1vw, 1.3rem);
+$text: clamp(1rem, 1.3vw, 1.5rem);
+$text-button: clamp(1rem, 1.3vw, 1.3rem);
