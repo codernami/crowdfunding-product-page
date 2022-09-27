@@ -1,15 +1,20 @@
-main {
+@use '../abstracts' as *;
+
+.main {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	margin: 0 auto;
+	background-color: coral;
 
-	@media screen and (min-width: 768px) {
+}
+.container {
+	width: 350px;
+
+	@include medium {
 		width: 70%;
-	}	
-	@media screen and (min-width: 992px) {
+	}
+	@include large {
 		width: 50%;
-	}	
+	}
 }

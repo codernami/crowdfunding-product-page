@@ -12,7 +12,7 @@ body {
   height: 70px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .icon-menu {
     display: none;
   }
@@ -30,7 +30,7 @@ body {
   transition: transform 0.5s ease;
   z-index: 50;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .menu {
     position: relative;
     height: auto;
@@ -47,7 +47,7 @@ body {
 .menu_item:last-child {
   border-bottom: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .menu_item {
     border-bottom: none;
   }
@@ -62,7 +62,7 @@ body {
   color: black;
   text-decoration: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .menu_link {
     color: white;
   }
@@ -85,11 +85,13 @@ body {
 - BTN-REWARD
 */
 .btn-back {
+  margin-bottom: 3vw;
+  padding: 1rem 1.5rem;
   border: none;
-  border-radius: 30px;
-  padding: 1rem 2rem;
-  color: white;
+  border-radius: 24px;
   background-color: hsl(176deg, 50%, 47%);
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  color: white;
 }
 .btn-back:hover {
   cursor: pointer;
@@ -97,30 +99,28 @@ body {
 }
 
 .btn-bookmark {
-  width: 50px;
+  margin-bottom: 3vw;
+  padding: 0 2.5vw 0 0;
   background-color: transparent;
   border: none;
+  border-radius: 24px;
 }
 .btn-bookmark span {
   display: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .btn-bookmark span {
     display: inline-block;
-    position: absolute;
-    top: 18px;
-    right: 28px;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+    padding-left: 0.5rem;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .btn-bookmark {
     display: flex;
-    position: relative;
-    width: 170px;
-    padding: 0 0.5rem 0 0;
+    justify-content: space-between;
+    align-items: center;
     background-color: #DEE2E2;
-    border-radius: 30px;
-    padding-left: 0;
   }
   .btn-bookmark:hover {
     cursor: pointer;
@@ -134,11 +134,14 @@ body {
 }
 
 .btn-reward {
+  margin-bottom: 3vw;
+  padding: 1rem 1.5rem;
   border: none;
-  border-radius: 30px;
-  padding: 1rem 2rem;
-  color: white;
+  border-radius: 24px;
   background-color: hsl(176deg, 50%, 47%);
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  color: white;
+  margin-bottom: 0;
 }
 .btn-reward:hover {
   cursor: pointer;
@@ -151,12 +154,11 @@ body {
 - REWARD-CARD
 */
 .product-card {
-  margin: 1rem;
-  padding: 0 1rem 2rem;
+  padding: 0 4vw;
   text-align: center;
   background-color: white;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  border-radius: 16px;
   transform: translateY(-60px);
 }
 .product-card__logo {
@@ -164,11 +166,10 @@ body {
   margin: 0 auto;
 }
 .product-card__title {
-  font-size: 1.7rem;
-  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
 }
 .product-card__description {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   color: hsl(0deg, 0%, 48%);
   line-height: 1.5;
 }
@@ -177,14 +178,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .product-card__buttons {
     justify-content: space-between;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .product-card {
-    padding: 0 2rem 2rem 2rem;
   }
 }
 
@@ -193,72 +189,84 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  padding: 4vw;
   text-align: center;
   background-color: white;
-  padding: 1.5rem 1rem;
+  border-radius: 12px;
 }
 .stats h2 {
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   margin-bottom: 1rem;
 }
 .stats span {
   display: block;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   color: hsl(0deg, 0%, 48%);
   margin-bottom: 1rem;
   position: relative;
-  width: 250px;
 }
 .stats span:not(.noline):after {
   content: "";
   position: absolute;
   height: 5px;
-  width: 30%;
+  width: 70%;
   bottom: -115%;
-  left: 35%;
+  left: 15%;
   border-bottom: 1px solid hsl(176deg, 72%, 28%);
 }
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .stats span:not(.noline):after {
     border-bottom: none;
     border-right: 1px solid hsl(176deg, 72%, 28%);
     height: 70px;
-    padding-left: 6rem;
     bottom: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .stats span {
+    padding-right: 4vw;
   }
 }
 .stats__bar {
   width: 100%;
   height: 1.1rem;
-  border-radius: 20px;
+  border-radius: 24px;
   background-color: #D1CFCF;
+  margin-top: 4vw;
 }
 .stats__bar--full {
   height: 1.1rem;
   background-color: hsl(176deg, 50%, 47%);
-  border-radius: 20px;
+  border-radius: 24px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .stats__bar {
-    margin: 2rem auto;
-    width: 600px;
+    align-self: center;
+    width: 90%;
   }
 }
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .stats {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 750px;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
 .card-reward {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 4vw 0;
+  padding: 3vw;
   border: 1px solid hsl(0deg, 2%, 63%);
+  border-radius: 12px;
+}
+@media only screen and (min-width: 1024px) {
+  .card-reward__header, .card-reward__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .card-reward__promo {
   font-weight: bold;
@@ -283,6 +291,7 @@ body {
 }
 .card-reward h3 {
   font-weight: bold;
+  font-size: clamp(1.2rem, 1vw, 1.3rem);
 }
 
 .disabled-card {
@@ -303,10 +312,10 @@ body {
   background-size: cover;
   background-color: black;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .header {
     background-image: url("../assets/images/image-hero-desktop.jpg");
-    padding: 2rem 5rem;
+    padding: 2vw 5vw;
   }
 }
 
@@ -318,35 +327,43 @@ body {
   display: none;
 }
 
-main {
+.main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0 auto;
+  background-color: coral;
 }
-@media screen and (min-width: 768px) {
-  main {
+
+.container {
+  width: 350px;
+}
+@media only screen and (min-width: 600px) {
+  .container {
     width: 70%;
   }
 }
-@media screen and (min-width: 992px) {
-  main {
+@media only screen and (min-width: 1024px) {
+  .container {
     width: 50%;
   }
 }
 
 .about {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 5vw;
+  margin: 3vw 0;
   background-color: white;
+  border-radius: 12px;
 }
 .about h2 {
   font-weight: bold;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 .about p {
   color: hsl(0deg, 2%, 63%);
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  padding: 1vw;
+  padding-left: 0;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

@@ -1,4 +1,5 @@
 @use '../abstracts' as *;
+@use '../base' as *;
 
 /*
 - MIXIN-BUTTON
@@ -8,11 +9,13 @@
 */
 
 @mixin button {
+	margin-bottom: 3vw;
+	padding: 1rem 1.5rem;
 	border: none;
-	border-radius: 30px;
-	padding: 1rem 2rem;
-	color: white;
+	border-radius: 24px;
 	background-color: $moderate-cyan;
+	font-size: $text-button;
+	color: white;
 
 	&:hover {
 		cursor: pointer;
@@ -27,29 +30,27 @@
 
 // BTN-BOOKMARK
 .btn-bookmark {
-	width: 50px;
+	margin-bottom: 3vw;
+	padding: 0 2.5vw 0 0;
 	background-color: transparent;
 	border: none;
+	border-radius: 24px;
 
 	span {
 		display: none;
 
 		@include medium {
 			display: inline-block;
-			position: absolute;
-			top: 18px;
-			right: 28px;
+			font-size: $text-button;
+			padding-left: .5rem;
 		}	
 	}
 	
 	@include medium {
 		display: flex;
-		position: relative;
-		width: 170px;
-		padding: 0 .5rem 0 0;
-		background-color: #DEE2E2;
-		border-radius: 30px;
-		padding-left: 0;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #DEE2E2;		
 
 		&:hover {
 			cursor: pointer;
@@ -68,4 +69,5 @@
 // BTN-REWARD
 .btn-reward {
 	@include button;
+	margin-bottom: 0;
 }

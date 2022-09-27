@@ -3,14 +3,19 @@
 
 
 .about {
-	margin: 1rem;
-	padding: 1rem;
+	padding: 5vw;
+	margin: 3vw 0;
 	background-color: white;
+	border-radius: 12px;
 
 	h2 {
 		font-weight: bold;
+		font-size: $title-section;
 	}
 	p {
 		color: $light-gray;
+		font-size: $text;
+		padding: 1vw;
+		padding-left: 0;
 	}
 }
