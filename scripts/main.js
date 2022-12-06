@@ -5,8 +5,9 @@ DISPLAY MENU NAV MOBILE
 
 const iconMenu = document.getElementById('icon-menu');
 const navMenu = document.getElementById('menu');
-const links = document.getElementsByClassName('menu_item');
+const links = document.getElementsByClassName('menu__item');
 const header = document.getElementById('header');
+const glassContainer = document.getElementById('glass-container');
 
 
 let isMenuOpen = false;
@@ -18,12 +19,14 @@ iconMenu.addEventListener('click', () => {
 		navMenu.classList.add('show-menu');
 		navMenu.classList.remove('hide-menu');
 		header.classList.add('add-opacity');
+		glassContainer.classList.add('glass-container');	
 		iconMenu.src= "./styles/assets/images/icon-close-menu.svg";
 		closeMenu();
 	} else {
 		navMenu.classList.add('hide-menu');
 		navMenu.classList.remove('show-menu');
 		header.classList.remove('add-opacity');
+		glassContainer.classList.remove('glass-container');	
 		iconMenu.src= "./styles/assets/images/icon-hamburguer.svg";
 	}
 	
@@ -36,6 +39,7 @@ function closeMenu() {
 			navMenu.classList.add('hide-menu');
 		
 			header.classList.remove('add-opacity');
+			glassContainer.classList.remove('glass-container');	
 			iconMenu.src= "./styles/assets/images/icon-hamburguer.svg";
 		})
 	}
@@ -99,8 +103,8 @@ mediaQuery.addListener(mediaSelected)
 ******************************
 STATS BAR
 ***************************** */
-const mainStats = document.getElementById('main-stats');
-const statsBar = document.getElementById('statsFullBar');
+const mainStats = document.getElementById('current-stats');
+const statsFullBar = document.getElementById('statsFullBar');
 
 function getNumber() {
 	const stats = mainStats.textContent;
@@ -110,13 +114,13 @@ function getNumber() {
 }
 
 function progressFullBar(number){
-	statsBar.style.width = `${number}%`;
+	statsFullBar.style.width = `${number}%`;
 }
 progressFullBar(getNumber());
 
 /* 
 ******************************
-ABOUT CARDS
+DISABLED REWARD CARD
 ***************************** */
 const rewardCard = document.getElementsByClassName('card-reward');
 const rewardLeft = document.getElementsByClassName('card-reward__left');
