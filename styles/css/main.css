@@ -419,6 +419,10 @@ body {
   flex-wrap: wrap;
   font-weight: bold;
 }
+.modal-pledge__description label:hover {
+  color: hsl(176deg, 50%, 47%);
+  cursor: pointer;
+}
 .modal-pledge__description .pledge {
   color: hsl(176deg, 50%, 47%);
   margin-left: 7vw;

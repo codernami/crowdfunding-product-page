@@ -30,6 +30,7 @@
 		color: $dark-gray;
 		line-height: 1.5;
 	}
+
 	&__buttons {
 		display: flex;
 		justify-content: center;
@@ -39,6 +40,7 @@
 			justify-content: space-between;
 		}	
 	}
+
 }
 
 
@@ -51,7 +53,9 @@
 	padding: 4vw;	
 	text-align: center;
 	background-color: white;
+
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
 	border-radius: 12px;
 
 	
@@ -134,6 +138,7 @@
 		}
 	}
 
+
 	&__header {
 		h3 {
 			font-weight: bold;
@@ -166,6 +171,37 @@
 			}
 		}
 	}
+
+	&__promo {
+		font-weight: bold;
+		color: $moderate-cyan;
+	}
+
+	&__left {
+		display: block;
+		font-size: 2rem;
+		font-weight: bold;
+	    color: black;
+	    margin: 1rem 0;
+	    position: relative;
+		
+		&:after {
+			content: 'left';
+			position: absolute;
+			top: 10px;
+			
+			font-size: 1rem;
+			font-weight: normal;
+			color: $light-gray;
+			padding-left: .5rem;
+		}
+	}
+	
+	h3 {
+		font-weight: bold;
+		font-size: $title-card;
+	}
+
 }
 
 .disabled-card {
