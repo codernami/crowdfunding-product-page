@@ -8,6 +8,7 @@ btnSupport.addEventListener("click", () => {
 	modalSupport.style.display = "block";
 	glassContainer.classList.add('glass-container');
 	glassContainer.classList.add('glass-container-show-modal');	
+
 });
 
 closeModal.addEventListener("click", () => {
@@ -24,6 +25,7 @@ const modalPledge = document.getElementsByClassName('modal-pledge');
 const displayPledges = document.getElementsByClassName("pledge-display");
 const inputPledge = document.getElementsByClassName('pledge-selection__input');
 const left = document.getElementsByClassName('left');
+
 
 for (let i = 0; i < radioButtons.length; i++) {
 	displayPledges[i].style.display= "none";
@@ -59,12 +61,13 @@ for (let i = 0; i < radioButtons.length; i++) {
 			displayPledges[2].style.display= "none";
 			modalPledge[2].style.border = '1px solid hsl(0, 2%, 63%)';
 		}
-
 	});
 	
 };	
 
+
 // DISPLAY THANKS MODAL
+
 const btnContinue = document.getElementsByClassName("btn-continue");
 const thanksModal = document.getElementById("modal-thanks");
 const btnGotit = document.getElementById("btn-gotit");

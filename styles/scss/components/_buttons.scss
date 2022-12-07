@@ -8,6 +8,7 @@
 - BTN-REWARD from reward card
 - BTN-CONTINUE from inner pledge modals
 - BTN-GOTIT from thanks modal
+
 */
 
 @mixin button {
@@ -25,12 +26,14 @@
 	}
 }
 
+
 // From Product card
 .btn-support {	
 	@include button; 
 }
 
 // From Product card
+
 .btn-bookmark {
 	margin-bottom: 3vw;
 	padding: 0 2.5vw 0 0;
@@ -66,6 +69,7 @@
 		}	
 	}
 }
+
 
 
 // From reward card
