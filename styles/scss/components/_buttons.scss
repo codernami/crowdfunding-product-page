@@ -3,9 +3,13 @@
 
 /*
 - MIXIN-BUTTON
-- BTN-BACK
-- BTN-BOOKMARK
-- BTN-REWARD
+
+- BTN-SUPPORT from product card
+- BTN-BOOKMARK from product card
+- BTN-REWARD from reward card
+- BTN-CONTINUE from inner pledge modals
+- BTN-GOTIT from thanks modal
+
 */
 
 @mixin button {
@@ -23,12 +27,21 @@
 	}
 }
 
+
+// From Product card
+.btn-support {	
+	@include button; 
+}
+
+// From Product card
+
 // BTN-BACK
 .btn-back {	
 	@include button; 
 }
 
 // BTN-BOOKMARK
+
 .btn-bookmark {
 	margin-bottom: 3vw;
 	padding: 0 2.5vw 0 0;
@@ -66,8 +79,25 @@
 }
 
 
+
+// From reward card
+.btn-reward {
+	@include button;
+	margin-bottom: 0;
+}
+
+//From inner pledge modals
+.btn-continue {
+	@include button;
+}
+
+// From thanks modal
+.btn-gotit {
+	@include button;
+
 // BTN-REWARD
 .btn-reward {
 	@include button;
 	margin-bottom: 0;
+
 }

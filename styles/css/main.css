@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
 body {
   font-family: "Commissioner", sans-serif;
-  background-color: pink;
 }
 
 .navbar {
@@ -11,9 +10,8 @@ body {
   padding: 0 1rem;
   height: 70px;
 }
-
 @media only screen and (min-width: 600px) {
-  .icon-menu {
+  .navbar__icon {
     display: none;
   }
 }
@@ -40,22 +38,22 @@ body {
     background-color: transparent;
   }
 }
-.menu_item {
+.menu__item {
   border-bottom: 1px solid hsl(0deg, 0%, 48%);
   padding: 1.5rem 0;
 }
-.menu_item:last-child {
+.menu__item:last-child {
   border-bottom: none;
 }
 @media only screen and (min-width: 600px) {
-  .menu_item {
+  .menu__item {
     border-bottom: none;
   }
-  .menu_item:hover {
+  .menu__item:hover {
     cursor: pointer;
   }
 }
-.menu_link {
+.menu__link {
   padding-left: 1.5rem;
   font-size: 1.3rem;
   font-weight: bold;
@@ -63,7 +61,7 @@ body {
   text-decoration: none;
 }
 @media only screen and (min-width: 600px) {
-  .menu_link {
+  .menu__link {
     color: white;
   }
 }
@@ -80,11 +78,13 @@ body {
 
 /*
 - MIXIN-BUTTON
-- BTN-BACK
-- BTN-BOOKMARK
-- BTN-REWARD
+- BTN-SUPPORT from product card
+- BTN-BOOKMARK from product card
+- BTN-REWARD from reward card
+- BTN-CONTINUE from inner pledge modals
+- BTN-GOTIT from thanks modal
 */
-.btn-back {
+.btn-support {
   margin-bottom: 3vw;
   padding: 1rem 1.5rem;
   border: none;
@@ -93,7 +93,7 @@ body {
   font-size: clamp(1rem, 1.3vw, 1.3rem);
   color: white;
 }
-.btn-back:hover {
+.btn-support:hover {
   cursor: pointer;
   background-color: hsl(176deg, 72%, 28%);
 }
@@ -148,6 +148,34 @@ body {
   background-color: hsl(176deg, 72%, 28%);
 }
 
+.btn-continue {
+  margin-bottom: 3vw;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 24px;
+  background-color: hsl(176deg, 50%, 47%);
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  color: white;
+}
+.btn-continue:hover {
+  cursor: pointer;
+  background-color: hsl(176deg, 72%, 28%);
+}
+
+.btn-gotit {
+  margin-bottom: 3vw;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 24px;
+  background-color: hsl(176deg, 50%, 47%);
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  color: white;
+}
+.btn-gotit:hover {
+  cursor: pointer;
+  background-color: hsl(176deg, 72%, 28%);
+}
+
 /*
 - PRODUCT-CARD
 - STATS-CARD
@@ -192,6 +220,7 @@ body {
   padding: 4vw;
   text-align: center;
   background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
 }
 .stats h2 {
@@ -268,11 +297,15 @@ body {
     align-items: center;
   }
 }
-.card-reward__promo {
+.card-reward__header h3 {
+  font-weight: bold;
+  font-size: clamp(1.2rem, 1vw, 1.3rem);
+}
+.card-reward__header span {
   font-weight: bold;
   color: hsl(176deg, 50%, 47%);
 }
-.card-reward__left {
+.card-reward__footer span {
   display: block;
   font-size: 2rem;
   font-weight: bold;
@@ -280,7 +313,7 @@ body {
   margin: 1rem 0;
   position: relative;
 }
-.card-reward__left:after {
+.card-reward__footer span:after {
   content: "left";
   position: absolute;
   top: 10px;
@@ -288,10 +321,6 @@ body {
   font-weight: normal;
   color: hsl(0deg, 2%, 63%);
   padding-left: 0.5rem;
-}
-.card-reward h3 {
-  font-weight: bold;
-  font-size: clamp(1.2rem, 1vw, 1.3rem);
 }
 
 .disabled-card {
@@ -302,6 +331,162 @@ body {
 .disabled-btn {
   background-color: hsl(0deg, 2%, 63%);
   pointer-events: none;
+}
+
+.modal-support {
+  display: none;
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  z-index: 10;
+  height: auto;
+  overflow: auto;
+  margin: 3vw;
+  background-color: white;
+  padding: 5vw;
+  border-radius: 12px;
+  width: 300px;
+}
+@media only screen and (min-width: 600px) {
+  .modal-support {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .modal-support {
+    width: 55%;
+  }
+}
+.modal-support__header {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-support__header h2 {
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+.modal-support__header button {
+  background-color: transparent;
+  border: none;
+}
+.modal-support p {
+  color: hsl(0deg, 2%, 63%);
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  padding: 1vw;
+  padding-left: 0;
+}
+
+.modal-pledge {
+  border: 1px solid hsl(0deg, 2%, 63%);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.modal-pledge__description {
+  padding: 6vw;
+}
+.modal-pledge__description input {
+  display: none;
+}
+.modal-pledge__description .radio-button {
+  width: 20px;
+  height: 20px;
+  margin-right: 3vw;
+  background-color: white;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.modal-pledge__description .radio-button::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: hsl(176deg, 50%, 47%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.modal-pledge__description input:checked + label .radio-button::after {
+  opacity: 1;
+}
+.modal-pledge__description label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+.modal-pledge__description label:hover {
+  color: hsl(176deg, 50%, 47%);
+  cursor: pointer;
+}
+.modal-pledge__description .pledge {
+  color: hsl(176deg, 50%, 47%);
+  margin-left: 7vw;
+  padding-top: 2vw;
+}
+@media only screen and (min-width: 600px) {
+  .modal-pledge__description .pledge {
+    padding-top: 0;
+  }
+}
+.modal-pledge h4 span {
+  color: hsl(0deg, 2%, 63%);
+}
+.modal-pledge .pledge-display {
+  border-top: 1px solid #EDE9E9;
+}
+.modal-pledge .pledge-display h3 {
+  color: hsl(0deg, 2%, 63%);
+  text-align: center;
+  padding: 3vw;
+}
+.modal-pledge .pledge-display .pledge-selection--zero {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4vw;
+}
+.modal-pledge .pledge-display .pledge-selection {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-pledge .pledge-display .pledge-selection__input {
+  width: 35%;
+  border-radius: 24px;
+  border: 1px solid hsl(0deg, 2%, 63%);
+  height: 50px;
+  text-align: center;
+}
+
+.modal-thanks {
+  display: none;
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  z-index: 20;
+  width: 90%;
+  height: 18%;
+  overflow: auto;
+  margin: 3vw;
+  padding: 3vw;
+  background-color: orange;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+}
+.modal-thanks__icon {
+  margin: 2rem auto;
+}
+.modal-thanks h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+.modal-thanks p {
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.5;
 }
 
 .header {
@@ -332,7 +517,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: coral;
+  position: relative;
 }
 
 .container {
@@ -349,10 +534,26 @@ body {
   }
 }
 
+.glass-container {
+  height: 105%;
+  width: 100%;
+  position: absolute;
+  top: -5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  transition: backdrop-filter 0.5s ease;
+}
+
+.glass-container-show-modal {
+  height: 125%;
+  top: -25%;
+}
+
 .about {
   padding: 5vw;
   margin: 3vw 0;
   background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
 }
 .about h2 {

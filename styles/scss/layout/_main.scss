@@ -1,12 +1,13 @@
 @use '../abstracts' as *;
 
+
 .main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background-color: coral;
-
+	
+	position: relative;
 }
 .container {
 	width: 350px;
@@ -17,4 +18,17 @@
 	@include large {
 		width: 50%;
 	}
+}
+.glass-container {
+	height: 105%; //125
+	width: 100%;
+	position: absolute;
+	top: -5%;//-25
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(1px);
+	transition: backdrop-filter 0.5s ease;
+}
+.glass-container-show-modal {
+	height: 125%;
+	top: -25%;
 }
