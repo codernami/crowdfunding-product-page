@@ -3,7 +3,6 @@
 
 /*
 - MIXIN-BUTTON
-
 - BTN-SUPPORT from product card
 - BTN-BOOKMARK from product card
 - BTN-REWARD from reward card
@@ -34,13 +33,6 @@
 }
 
 // From Product card
-
-// BTN-BACK
-.btn-back {	
-	@include button; 
-}
-
-// BTN-BOOKMARK
 
 .btn-bookmark {
 	margin-bottom: 3vw;
@@ -94,10 +86,4 @@
 // From thanks modal
 .btn-gotit {
 	@include button;
-
-// BTN-REWARD
-.btn-reward {
-	@include button;
-	margin-bottom: 0;
-
 }

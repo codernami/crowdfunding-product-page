@@ -91,6 +91,14 @@
 			align-items: center;
 			flex-wrap: wrap;
 			font-weight: bold;
+
+
+			&:hover {
+				color: $moderate-cyan;
+				cursor: pointer;
+			}
+
+
 		}
 		.pledge {
 			color: $moderate-cyan;

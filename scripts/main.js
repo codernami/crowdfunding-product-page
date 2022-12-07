@@ -5,9 +5,7 @@ DISPLAY MENU NAV MOBILE
 
 const iconMenu = document.getElementById('icon-menu');
 const navMenu = document.getElementById('menu');
-
 const links = document.getElementsByClassName('menu__item');
-
 const header = document.getElementById('header');
 const glassContainer = document.getElementById('glass-container');
 

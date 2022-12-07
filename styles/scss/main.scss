@@ -7,12 +7,10 @@
 @use 'components/navbar';
 @use 'components/buttons';
 @use 'components/cards';
-
 @use 'components/modals';
-
 
 @use 'layout/header';
 @use 'layout/main';
 @use 'layout/about-intro';
 
-@use 'vendors/normalize'
+@use 'vendors/normalize';
