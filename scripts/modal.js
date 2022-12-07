@@ -1,14 +1,13 @@
 const btnSupport = document.getElementById("btn-support");
 const modalSupport = document.getElementById("modal-support");
 const closeModal = document.getElementById("close-modal");
-//const glassContainer = document.getElementById('glass-container');
+
 
 // Display support modal with inner pledges modals
 btnSupport.addEventListener("click", () => {
 	modalSupport.style.display = "block";
 	glassContainer.classList.add('glass-container');
-	glassContainer.classList.add('glass-container-show-modal')
-	
+	glassContainer.classList.add('glass-container-show-modal');	
 });
 
 closeModal.addEventListener("click", () => {
@@ -24,7 +23,7 @@ const radioButtons = document.querySelectorAll('input[name="pledge"]');
 const modalPledge = document.getElementsByClassName('modal-pledge');
 const displayPledges = document.getElementsByClassName("pledge-display");
 const inputPledge = document.getElementsByClassName('pledge-selection__input');
-
+const left = document.getElementsByClassName('left');
 
 for (let i = 0; i < radioButtons.length; i++) {
 	displayPledges[i].style.display= "none";
@@ -54,25 +53,18 @@ for (let i = 0; i < radioButtons.length; i++) {
 		if (radioButtons[i].value == 'pledge75') {
 			displayPledges[2].style.display= "block";
 			modalPledge[2].style.border = '2px solid hsl(176, 50%, 47%)';
+			inputPledge[1].value = "$ 75";
 			displayThanksModal(2);
 		} else {
 			displayPledges[2].style.display= "none";
 			modalPledge[2].style.border = '1px solid hsl(0, 2%, 63%)';
 		}
 
-		if (radioButtons[i].value == 'pledge200') {
-			displayPledges[3].style.display= "block";
-			modalPledge[3].style.border = '2px solid $light-gray';
-			displayThanksModal(3);
-		} else {
-			displayPledges[3].style.display= "none";
-			modalPledge[3].style.border = '2px solid hsl(0, 2%, 63%)';
-		}
 	});
 	
 };	
 
-// Display thanks modal
+// DISPLAY THANKS MODAL
 const btnContinue = document.getElementsByClassName("btn-continue");
 const thanksModal = document.getElementById("modal-thanks");
 const btnGotit = document.getElementById("btn-gotit");
